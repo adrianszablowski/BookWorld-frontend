@@ -12,7 +12,7 @@ export default function BookCard({ book }: Readonly<BookCardProps>) {
     <Card>
       <CardContent>
         <Image
-          src={book.cover || "/placeholder.svg"}
+          src={book.cover}
           alt={book.title}
           width={300}
           height={400}
