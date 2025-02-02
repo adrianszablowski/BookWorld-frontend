@@ -1,15 +1,20 @@
 export type Review = {
-  id: number;
-  user: string;
+  id: string;
+  user: {
+    name: string;
+    avatar: string;
+  };
   book: string;
   comment: string;
-  avatar: string;
+  rating: number;
+  date: string;
 };
 
 export type Book = {
-  id: number;
+  id: string;
   title: string;
   author: string;
   rating: number;
   cover: string;
+  description: string;
 };

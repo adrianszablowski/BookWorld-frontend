@@ -8,7 +8,7 @@ export default function MainLayout({
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main className="p-2 px-3">
+      <main className="w-full p-2 px-3">
         <SidebarTrigger className="mb-2" />
         {children}
       </main>

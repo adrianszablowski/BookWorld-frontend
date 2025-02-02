@@ -1,30 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { reviews } from "@/mocks/mocks";
 import map from "lodash/map";
 import ReviewCard from "./review-card";
-
-const reviews = [
-  {
-    id: 1,
-    user: "Alice",
-    book: "The Great Gatsby",
-    comment: "A classic that never gets old!",
-    avatar: "/placeholder.svg",
-  },
-  {
-    id: 2,
-    user: "Bob",
-    book: "To Kill a Mockingbird",
-    comment: "Powerful and moving story.",
-    avatar: "/placeholder.svg",
-  },
-  {
-    id: 3,
-    user: "Charlie",
-    book: "1984",
-    comment: "Chilling and thought-provoking.",
-    avatar: "/placeholder.svg",
-  },
-];
 
 export function RecentReviews() {
   return (

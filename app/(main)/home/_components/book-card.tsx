@@ -10,15 +10,19 @@ type BookCardProps = {
 
 export default function BookCard({ book }: Readonly<BookCardProps>) {
   return (
-    <Link href={`book/${book.id}`} prefetch={false}>
+    <Link
+      href={`library/book/${book.id}`}
+      prefetch={false}
+      className="w-full sm:w-auto"
+    >
       <Card>
-        <CardContent>
+        <CardContent className="flex justify-center p-6">
           <Image
             src={book.cover}
             alt={book.title}
-            width={300}
+            width={200}
             height={400}
-            className="h-48 w-full object-cover"
+            className="h-60 object-fill"
           />
         </CardContent>
         <CardFooter className="flex-col items-start gap-1">
