@@ -1,5 +1,3 @@
-import { Home, Library, User } from "lucide-react";
-
 import {
   Sidebar,
   SidebarContent,
@@ -10,23 +8,16 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import map from "lodash/map";
+import { BookOpen, Home, Library, Settings, User } from "lucide-react";
+import Link from "next/link";
 
 const items = [
-  {
-    title: "Home",
-    url: "#",
-    icon: Home,
-  },
-  {
-    title: "Library",
-    url: "#",
-    icon: Library,
-  },
-  {
-    title: "Profile",
-    url: "#",
-    icon: User,
-  },
+  { title: "Home", url: "/home", icon: Home },
+  { title: "Library", url: "/library", icon: Library },
+  { title: "Profile", url: "/profile", icon: User },
+  { title: "Reviews", url: "/reviews", icon: BookOpen },
+  { title: "Settings", url: "/settings", icon: Settings },
 ];
 
 export function AppSidebar() {
@@ -39,13 +30,13 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
+              {map(items, (item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
