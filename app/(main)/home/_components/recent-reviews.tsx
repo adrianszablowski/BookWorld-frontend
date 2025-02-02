@@ -1,6 +1,6 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import map from "lodash/map";
+import ReviewCard from "./review-card";
 
 const reviews = [
   {
@@ -35,20 +35,7 @@ export function RecentReviews() {
       <CardContent>
         <div className="space-y-4">
           {map(reviews, (review) => (
-            <div key={review.id} className="flex items-start gap-4">
-              <Avatar>
-                <AvatarImage src={review.avatar} alt={review.user} />
-                <AvatarFallback>{review.user}</AvatarFallback>
-              </Avatar>
-              <div>
-                <p className="text-sm font-medium">
-                  {review.user} on {review.book}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {review.comment}
-                </p>
-              </div>
-            </div>
+            <ReviewCard key={review.id} review={review} />
           ))}
         </div>
       </CardContent>

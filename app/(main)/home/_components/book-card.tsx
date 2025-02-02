@@ -1,15 +1,10 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Book } from "@/types/types";
 import { Star } from "lucide-react";
 import Image from "next/image";
 
 type BookCardProps = {
-  book: {
-    id: number;
-    title: string;
-    author: string;
-    rating: number;
-    cover: string;
-  };
+  book: Book;
 };
 
 export default function BookCard({ book }: Readonly<BookCardProps>) {
