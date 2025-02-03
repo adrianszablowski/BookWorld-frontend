@@ -1,3 +1,9 @@
+export type ReadingList = {
+  id: string;
+  name: string;
+  bookCount: number;
+};
+
 export type Review = {
   id: string;
   user: {
@@ -13,8 +19,19 @@ export type Review = {
 export type Book = {
   id: string;
   title: string;
+  cover: string;
   author: string;
   rating: number;
-  cover: string;
   description: string;
+};
+
+export type User = {
+  id: string;
+  name: string;
+  username: string;
+  avatar: string;
+  bio: string;
+  readingLists: ReadingList[];
+  reviews: Review[];
+  addedBooks: Book[];
 };

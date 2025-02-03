@@ -1,4 +1,4 @@
-import { Book, Review } from "@/types/types";
+import { Book, Review, User } from "@/types/types";
 
 export const books: Book[] = [
   {
@@ -111,3 +111,73 @@ export const reviews: Review[] = [
     date: "2024-01-05",
   },
 ];
+
+export const user: User = {
+  id: "1",
+  name: "Jane Doe",
+  username: "@janereads",
+  avatar: "",
+  bio: "Avid reader, book reviewer, and aspiring author. I love getting lost in new worlds and discussing great stories.",
+  readingLists: [
+    { id: "1", name: "To Read", bookCount: 15 },
+    { id: "2", name: "Currently Reading", bookCount: 3 },
+    { id: "3", name: "Read", bookCount: 142 },
+    { id: "4", name: "Favorites", bookCount: 27 },
+  ],
+  reviews: [
+    {
+      id: "1",
+      user: { name: "Jane Doe", avatar: "" },
+      book: "The Great Gatsby",
+      comment: "A timeless classic that never fails to captivate...",
+      rating: 5,
+      date: "2024-02-01",
+    },
+    {
+      id: "2",
+      user: { name: "Jane Doe", avatar: "" },
+      book: "1984",
+      comment: "A chilling portrayal of a dystopian future...",
+      rating: 4,
+      date: "2024-02-02",
+    },
+    {
+      id: "3",
+      user: { name: "Jane Doe", avatar: "" },
+      book: "To Kill a Mockingbird",
+      comment: "Harper Lee's masterpiece continues to resonate...",
+      rating: 5,
+      date: "2024-02-03",
+    },
+  ],
+  addedBooks: [
+    {
+      id: "1",
+      title: "The Catcher in the Rye",
+      cover:
+        "https://m.media-amazon.com/images/I/81aY1lxk+9L._AC_UF1000,1000_QL80_.jpg",
+      author: "J.D. Salinger",
+      rating: 4.0,
+      description: "A controversial coming-of-age novel.",
+    },
+    {
+      id: "2",
+      title: "Pride and Prejudice",
+      cover:
+        "https://m.media-amazon.com/images/I/81aY1lxk+9L._AC_UF1000,1000_QL80_.jpg",
+      author: "Jane Austen",
+      rating: 4.6,
+      description:
+        "A romantic novel that deals with issues of class, marriage, and morality.",
+    },
+    {
+      id: "3",
+      title: "The Hobbit",
+      cover:
+        "https://m.media-amazon.com/images/I/81aY1lxk+9L._AC_UF1000,1000_QL80_.jpg",
+      author: "J.R.R. Tolkien",
+      rating: 4.7,
+      description: "A fantasy novel about a hobbit's adventurous quest.",
+    },
+  ],
+};
