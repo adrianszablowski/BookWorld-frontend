@@ -24,7 +24,9 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader className="pt-4 text-center text-2xl">
-        BookWorld
+        <Link href="/home" prefetch={false}>
+          BookWorld
+        </Link>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
