@@ -181,3 +181,14 @@ export const user: User = {
     },
   ],
 };
+
+export const genres = [
+  "Fiction",
+  "Non-Fiction",
+  "Science Fiction",
+  "Fantasy",
+  "Mystery",
+  "Romance",
+  "Thriller",
+  "Horror",
+];

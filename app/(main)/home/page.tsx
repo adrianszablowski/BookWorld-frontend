@@ -1,4 +1,5 @@
-import { BookGrid } from "./_components/book-grid";
+import { books } from "@/mocks/mocks";
+import { BooksGrid } from "./_components/books-grid";
 import { RecentReviews } from "./_components/recent-reviews";
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
     <div className="space-y-6">
       <h1 className="text-3xl font-bold">Welcome to BookWorld</h1>
       <RecentReviews />
-      <BookGrid />
+      <BooksGrid header="Popular Books" books={books} />
     </div>
   );
 }

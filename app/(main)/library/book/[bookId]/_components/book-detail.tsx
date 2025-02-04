@@ -27,7 +27,7 @@ export default function BookDetail({ book }: Readonly<BookDetailProps>) {
           <div className="text-sm font-semibold uppercase tracking-wide text-indigo-500">
             {book.author}
           </div>
-          <h1 className="text-4xl font-bold leading-tight">{book.title}</h1>
+          <h1 className="text-3xl font-bold leading-tight">{book.title}</h1>
           <div className="flex items-center">
             {map(times(5), (_, i) => (
               <Star
