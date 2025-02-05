@@ -7,6 +7,7 @@ import UserReviews from "./_components/user-reviews";
 export default function Profile() {
   return (
     <div className="space-y-6">
+      <h1 className="text-3xl font-bold">Profile</h1>
       <ProfileHeader user={user} />
       <div className="grid gap-6 md:grid-cols-2">
         <ReadingLists lists={user.readingLists} />
