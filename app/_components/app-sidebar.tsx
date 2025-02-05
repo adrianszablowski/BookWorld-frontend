@@ -27,7 +27,7 @@ export function AppSidebar() {
   const pathname = usePathname();
 
   return (
-    <Sidebar>
+    <Sidebar className="z-50">
       <SidebarHeader className="pt-4 text-center text-2xl">
         <Link href="/" prefetch={false}>
           BookWorld
