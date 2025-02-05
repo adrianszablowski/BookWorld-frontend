@@ -17,7 +17,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const items = [
-  { title: "Home", url: "/home", icon: Home },
+  { title: "Home", url: "/", icon: Home },
   { title: "Library", url: "/library", icon: Library },
   { title: "Profile", url: "/profile", icon: User },
   { title: "Settings", url: "/settings", icon: Settings },
@@ -29,7 +29,7 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader className="pt-4 text-center text-2xl">
-        <Link href="/home" prefetch={false}>
+        <Link href="/" prefetch={false}>
           BookWorld
         </Link>
       </SidebarHeader>

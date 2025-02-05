@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { books } from "@/mocks/mocks";
 import { Filter } from "lucide-react";
 import { useState } from "react";
-import { BooksGrid } from "../home/_components/books-grid";
+import { BooksGrid } from "../_components/books-grid";
 import FilterPanel from "./_components/filter-panel";
 import SearchBar from "./_components/search-bar";
 

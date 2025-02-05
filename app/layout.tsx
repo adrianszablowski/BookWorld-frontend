@@ -1,6 +1,8 @@
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
+import { AppSidebar } from "./_components/app-sidebar";
 import "./globals.css";
 
 const inter = Inter({
@@ -21,7 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        <SidebarProvider>
+          <AppSidebar />
+          <main className="w-full p-2 px-3">
+            <SidebarTrigger className="mb-2" />
+            {children}
+          </main>
+        </SidebarProvider>
+      </body>
     </html>
   );
 }
